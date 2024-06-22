@@ -1,5 +1,3 @@
-## gRPC 
-
 This repository provides an explanation of gRPC: What is it? Why use gRPC? How is it different from REST? + a gRPC vs. REST comparison PROJECT.
 
 ### ❓ What is gRPC?
@@ -193,6 +191,7 @@ gRPC has a transfer rate almost twice that of REST, indicating better efficiency
 Both protocols have low connection times, but gRPC has a significantly lower processing time.
 
 ### 💣 Distribution of Request Times
+
 | %         | REST (ms) | gRPC (ms) |
 |-----------|-----------|-----------|
 |    50%    |   1278    |   925     |
