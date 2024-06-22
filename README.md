@@ -1,3 +1,5 @@
+# gRPC
+
 This repository provides an explanation of gRPC: What is it? Why use gRPC? How is it different from REST? + a gRPC vs. REST comparison PROJECT.
 
 ### ❓ What is gRPC?
