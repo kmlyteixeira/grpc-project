@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "NotesApp";
+
+service NotesService {
+    rpc GetAllNotes (Empty) returns (NotesList);
+    rpc GetNoteById (NoteRequest) returns (NoteResponse);
+    rpc AddNote (Note) returns (Empty);
+    rpc UpdateNoteById (NoteUpdateRequest) returns (Empty);
+    rpc DeleteNoteById (NoteRequest) returns (Empty);
+    rpc GetLargeText (Empty) returns (LargeTextResponse);
+}
+
+message Empty {}
+
+message Note {
+    string content = 1;
+}
+
+message NoteRequest {
+    int32 id = 1;
+}
+
+message NoteUpdateRequest {
+    int32 id = 1;
+    string content = 2;
+}
+
+message NotesList {
+    repeated string notes = 1;
+}
+
+message NoteResponse {
+    string content = 1;
+}
+
+message LargeTextResponse {
+    string large_text = 1;
+}
