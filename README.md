@@ -18,14 +18,14 @@ gRPC was designed specifically for the development of high-performance APIs. It 
 
 **Some features that make gRPC more performant such as:**
 
-:bookmark_tabs: **Use Protocol Buffers** as default data serialization format - his format is binary and more compact than text formats such as _JSON_, and results in lower bandwidth consumption and less overhead during data transmission
+📑 **Use Protocol Buffers** as default data serialization format - his format is binary and more compact than text formats such as _JSON_, and results in lower bandwidth consumption and less overhead during data transmission
    - because it is a binary format and has an explicitly defined data schema (using a .proto file), data serialization and deserialization tend to be faster when compared to text formats such as JSON, where the data structure is less rigorous, which generates less overhead during data serialization and deserialization
      
-:bulb: **Use HTTP/2** as default transport protocol
+💡 **Use HTTP/2** as default transport protocol
 
-:loop: **Bidirectional Streaming** - which means that both the client and the server can send a continuous sequence of messages and can be useful in cases involving real time communications or transferring large amounts of data.
+➿ **Bidirectional Streaming** - which means that both the client and the server can send a continuous sequence of messages and can be useful in cases involving real time communications or transferring large amounts of data.
 
-:chart_with_downwards_trend: **Lower latency** - the efficiency of HTTP/2 combined with lower data overhead and bidirectional streaming capabilities means that gRPC generally has lower latencies compared to _REST_, for example, especially in environments where fast and efficient communication is crucial.
+📉 **Lower latency** - the efficiency of HTTP/2 combined with lower data overhead and bidirectional streaming capabilities means that gRPC generally has lower latencies compared to _REST_, for example, especially in environments where fast and efficient communication is crucial.
 
 ### gRPC x REST - Summary of differences
 
@@ -57,7 +57,7 @@ gRPC was designed specifically for the development of high-performance APIs. It 
    1. Run `dotnet build` and `dotner run` to compile and start the server
    2. The console should display: *Now listening on: `http://localhost:{port}`*
 
-#### :hammer: In this project, you'll find:
+#### 🛠️ In this project, you'll find:
 
 **`grpc-api` folder** - a gRPC API build w/ .NET 8
 
@@ -83,7 +83,7 @@ On the **client side**, two endpoints have been added: `/grpc` and `/rest`
 
 Once the APIs and the client have been created and properly started, we can run a load test to compare the performance of the services. To do this, we can use the *Apache Benchmarking Tool (ab)* to collect simple metrics. Like this:
 
-#### :one: REST ENDPOINT
+#### 1️⃣ REST ENDPOINT
 
 ```cmd
 ab  -n  1000  -c  100  localhost:{port}/rest
@@ -120,7 +120,7 @@ Percentage of the requests served within a certain time (ms)
  100%   3453 (longest request)
 ```
 
-#### :two: gRPC ENDPOINT
+#### 2️⃣ gRPC ENDPOINT
 
 ```cmd
 ab -n 1000 -c 100 localhost:{port}/grpc
@@ -192,7 +192,7 @@ gRPC has a transfer rate almost twice that of REST, indicating better efficiency
 
 Both protocols have low connection times, but gRPC has a significantly lower processing time.
 
-### :bomb: Distribution of Request Times
+### 💣 Distribution of Request Times
 | %         | REST (ms) | gRPC (ms) |
 |-----------|-----------|-----------|
 |    50%    |   1278    |   925     |
